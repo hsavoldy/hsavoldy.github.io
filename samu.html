@@ -185,6 +185,7 @@
             bathroom: { name: "Clean Bathroom", icon: "🛁" },
             laundry: { name: "Laundry", icon: "🧺" },
             food: { name: "Food Run", icon: "🛒" },
+            dust_sweep: { name: "Water Run", icon: "🐃" },
             // Bundled chores
             sweep_org: { name: "Sweep & Organize", icon: "🧹" },
             dust_sweep: { name: "Dust & Sweep", icon: "🪶" },
@@ -239,23 +240,23 @@
 
             switch (dayOfWeek) {
                 case 3: // Wednesday
-                    choreA = chores.kitchen;
-                    choreB = chores.sweep_org; // Bundle
+                    choreA = chores.water;
+                    choreB = chores.food; // Bundle
                     break;
                 case 4: // Thursday
                     choreA = chores.bathroom;
                     choreB = chores.kitchen;
                     break;
                 case 5: // Friday
-                    choreA = chores.food;
-                    choreB = chores.kitchen; // Kitchen needed daily
+                    choreA = chores.sweep_org;
+                    choreB = chores.dust_org; // Kitchen needed daily
                     break;
                 case 6: // Saturday
-                    choreA = chores.kitchen;
+                    choreA = chores.food;
                     choreB = chores.laundry; // Weekly item
                     break;
                 case 0: // Sunday
-                    choreA = chores.dust_sweep; // Bundle
+                    choreA = chores.bathroom; // Bundle
                     choreB = chores.kitchen; 
                     break;
             }
